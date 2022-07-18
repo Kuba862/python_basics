@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  python_test:
+    build: .
+    command: python manage.py runserver 0:8000
+    volumes:
+      - .:/projectApp
+    ports:
+      - 5555:8000
+    container_name: learn_python
+    restart: always
