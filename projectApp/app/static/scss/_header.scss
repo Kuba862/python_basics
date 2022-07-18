@@ -1,0 +1,15 @@
+#header {
+    max-width: 1024px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #ccc;
+    margin: 0 auto;
+    padding: 25px 0;
+    .login_link {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #363135;
+        font-size: .8rem;
+        font-weight: 700;
+    }
+}
