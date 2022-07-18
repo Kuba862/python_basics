@@ -6,7 +6,10 @@ def index(request):
     return HttpResponse("Hello There")
 
 def home_view(request):
-    context = {}
+    context = {
+        "name": "Jakub",
+        "lastName": "Rejch",
+    }
     form = InputForm(request.POST or None)
     context['form'] = InputForm()
     return render(request, "home.html", context)

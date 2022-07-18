@@ -8,5 +8,10 @@ body {
     max-width: 1024px;
     margin: 0 auto;
     @import 'header';
-    @import 'form';
+    #welcome {
+        display: flex;
+        justify-content: space-between;
+        background-color: aliceblue;
+        @import 'form';
+    }
 }
