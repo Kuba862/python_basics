@@ -1,7 +1,7 @@
 form {
     display: flex;
     flex-direction: column;
-    width: 25%;
+    width: 30%;
     gap: 5px;
     margin: 15px 0 0;
     padding: $padding_btn;
@@ -12,7 +12,6 @@ form {
     }
     #form_submit_btn {
         padding: $padding_btn;
-        background-color: $color_btn;
         border-radius: 5px;
         border: 2px solid #ccc;
         outline: #0063aa;
@@ -22,6 +21,5 @@ form {
         font-weight: 700;
         letter-spacing: 1.2px;
         text-transform: uppercase;
-        color: #0063aa;
     }
 }

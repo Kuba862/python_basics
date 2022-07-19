@@ -1,5 +1,4 @@
 from django import forms
-from .models import GeeksModel
 
 class InputForm(forms.Form):
     first_name = forms.CharField(max_length=200, required=True)
