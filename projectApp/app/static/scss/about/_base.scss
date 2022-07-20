@@ -1,0 +1,16 @@
+#about_me {
+    display: flex;
+    .image {
+        flex-basis: 100%;
+        img {
+            width: 100%;
+        }
+    }
+    .about_me_text {
+        flex-basis: 100%;
+        p {
+            padding: 10px;
+        }
+    }
+}
+@import './components/shareBtn';

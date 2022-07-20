@@ -8,6 +8,7 @@ body {
     max-width: 1024px;
     margin: 0 auto;
     @import 'header';
+    @import 'about/base';
     #welcome {
         display: flex;
         justify-content: space-between;
@@ -15,4 +16,5 @@ body {
         @import 'form';
     }
     @import 'body';
+    @import 'footer';
 }

@@ -1,0 +1,15 @@
+{% extends 'app/base.html' %}
+{% block content %}
+
+        <section id="welcome">
+        <form action="" method="post">
+            {% csrf_token %}
+            {{form.as_ul}}
+            <input type="submit" value="Submit" id="form_submit_btn">
+        </form>
+        <p id="welcome_text"></p>
+    </section>
+{% endblock %}
+<p id="text">{{text}}</p>
+    {% load static %}
+    <script src="{% static 'js/script.js' %}"></script>

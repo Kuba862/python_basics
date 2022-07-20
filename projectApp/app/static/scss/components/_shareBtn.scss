@@ -1,0 +1,19 @@
+.share_btn {
+    background-color: #8787e4;
+    color: #fff;
+    transition: 0.2s ease-in-out;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 900;
+    padding: 10px 0;
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 5px 0 10px #8787e4;
+        border-radius: 5px;
+        }
+}

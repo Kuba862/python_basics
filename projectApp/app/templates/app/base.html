@@ -1,0 +1,21 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css'%}">
+</head>
+<body>
+<header id="header">
+    <a href="/">home</a>
+    <a href="/about">about</a>
+    <div class="login_and_date">
+        <span class="date">{{day}} {{month}} {{year}}</span>
+        <span class="time">{{time}}</span>
+        <a href="/admin" class="login_link">Login</a>
+    </div>
+</header>
+
+{% block content %}
+
+{% endblock %}
+
+<footer id="footer">
+
+</footer>

@@ -10,7 +10,7 @@ function scssTask() {
     .pipe(dest('./app/static/css', { sourcemaps: '.'}));
 }
 function watchTask() {
-    watch('./app/static/scss/*.scss', series(scssTask));
+    watch(['./app/static/scss/*.scss', './app/static/scss/about/*.scss', './app/static/scss/components/*.scss'], series(scssTask));
 }
 
 exports.default = series(scssTask, watchTask);
