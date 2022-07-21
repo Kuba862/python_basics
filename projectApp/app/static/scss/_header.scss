@@ -6,11 +6,9 @@
     margin: 0 auto;
     padding: 25px 0;
     .logo {
-        background-image: url('../images/logo.png');
-        background-repeat: no-repeat;
-        background-size: contain;
-        width: 220px;
-        height: 150px;
+        animation: animate_logo 5s linear both;
+        width: 100px;
+        height: 100px;
         margin-left: 15px;
     }
     .navigation {
@@ -62,5 +60,47 @@
         width: 100%;
         border-bottom: 1px solid #fedb0b;
         border-top: 1px solid #fedb0b;
+    }
+}
+@keyframes animate_logo {
+    10% {
+        clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 100% 100%);
+        background: radial-gradient(circle, #c9740c 0%, #12f6ff 0%, $header_bg 73%);
+    }
+    20% {
+        clip-path: polygon(100% 100%, 100% 0, 0 100%, 50% 50%);
+        background: radial-gradient(circle, #c9740c 0%, #00fba6 0%, #000000 73%);
+    }
+    30% {
+        clip-path: polygon(0 0, 100% 0, 0 100%, 50% 50%);
+        background: radial-gradient(circle, #c9740c 0%, #00fb2f 0%, #000000 73%);
+    } 
+    40% {
+        clip-path: polygon(0 0, 0 100%, 0 100%, 50% 50%);
+        background: radial-gradient(circle, #c9740c 0%, #d8fb00 0%, #000000 73%);
+    } 
+    50% {
+        clip-path: polygon(100% 50%, 0 100%, 0 50%, 100% 100%);
+        background: radial-gradient(circle, #c9740c 0%, #fbae00 0%, #000000 73%);
+    } 
+    60% {
+        clip-path: polygon(100% 50%, 100% 0, 0 50%, 0 0);
+        background: radial-gradient(circle, #c9740c 0%, #fb0000 0%, #000000 73%);
+    } 
+    70% {
+        clip-path: polygon(100% 0, 100% 50%, 0 50%, 0 0);
+        background: radial-gradient(circle, #c9740c 0%, #fb00cc 0%, #000000 73%);
+    } 
+    80% {
+        clip-path: polygon(100% 100%, 100% 50%, 0 50%, 0 0);
+        background: radial-gradient(circle, #c9740c 0%, #aa00fb 0%, #000000 73%);
+    } 
+    90% {
+        clip-path: polygon(100% 100%, 100% 50%, 0 50%, 0 100%);
+        background: radial-gradient(circle, #c9740c 0%, #2300fb 0%, #000000 73%);
+    } 
+    100% {
+        clip-path: polygon(24% 13%, 76% 80%, 20% 80%, 81% 12%);
+        background: radial-gradient(circle, #c9740c 0%, #12f6ff 0%, #000000 73%);
     }
 }

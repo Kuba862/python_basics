@@ -46,4 +46,3 @@ btn.addEventListener('click', (e) => {
     const form = new Form_status();
     form.check_form();
 });
-

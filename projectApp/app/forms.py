@@ -7,3 +7,6 @@ class InputForm(forms.Form):
     zip_code = forms.CharField(max_length=10, required=False)
     date = forms.DateField(widget = forms.SelectDateWidget, required=False)
     
+class MyForm(forms.Form):
+    title = forms.CharField(max_length=200, required=False)
+    description = forms.CharField(max_length=200, required=False)

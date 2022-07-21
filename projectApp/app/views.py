@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .forms import InputForm
+from .forms import MyForm
 from .models import MyModel
 from datetime import datetime
 
@@ -31,3 +32,11 @@ def about_view(request):
         "app/about.html", {
         "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, commodi aliquid earum cumque alias doloribus animi odit, obcaecati mollitia repellat facilis ipsam ea deleniti, quia perferendis iste atque incidunt eveniet. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, commodi aliquid earum cumque alias doloribus animi odit, obcaecati mollitia repellat facilis ipsam ea deleniti, quia perferendis iste atque incidunt eveniet. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, commodi aliquid earum cumque alias doloribus animi odit, obcaecati mollitia repellat facilis ipsam ea deleniti, quia perferendis iste atque incidunt eveniet. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, commodi aliquid earum cumque alias doloribus animi odit, obcaecati mollitia repellat facilis ipsam ea deleniti, quia perferendis iste atque incidunt eveniet. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, commodi aliquid earum cumque alias doloribus animi odit, obcaecati mollitia repellat facilis ipsam ea deleniti. Lorem",
                   })
+
+def create_view(request):
+    context = {}
+    form = MyForm(request.POST or None)
+    if form.iv_valid():
+        form.save()
+    context['dataset'] = MyModel.objects.all()
+    return render(request, "createView.html", context)

@@ -1,0 +1,10 @@
+{% block content %}
+    <ul>
+        <li>{{ object.title }}</li>
+        <li>{{ object.description }}</li>
+        <hr/>
+        {% empty %}
+            <li>No objects yet. </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
