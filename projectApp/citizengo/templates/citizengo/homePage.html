@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <h1>HOME PAGE</h1>
+
+    <div class="petitions_container">
+        {% for petition in petitions %}
+            <div class="petition">
+                <a href="{% url 'petition' petition.id %}">
+                    <h3 class="title">{{petition.title}}</h3>
+                </a>
+                <p class="petition_content">{{petition.content}}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock  %}

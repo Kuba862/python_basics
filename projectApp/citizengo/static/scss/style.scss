@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+@import 'vars';
+body {
+    max-width: 980px;
+    margin: 0 auto;
+    @import 'components/header';
+}
