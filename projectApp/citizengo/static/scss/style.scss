@@ -9,4 +9,6 @@ body {
     max-width: 980px;
     margin: 0 auto;
     @import 'components/header';
+    @import 'components/homePage/petition';
+    @import 'components/footer';
 }

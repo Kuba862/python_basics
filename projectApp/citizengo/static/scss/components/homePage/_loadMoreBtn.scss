@@ -1,0 +1,19 @@
+#load-more-btn {
+    grid-column: 1;
+    width: 90%;
+    background-color: #fff;
+    border: 1px solid;
+    border-color: $border_color;
+    padding: 8px 12px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    color: $text_color;
+    font-weight: 700;
+    margin-bottom: 50px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    &:hover {
+        color: $blue;
+        border-color: $blue;
+    }
+}

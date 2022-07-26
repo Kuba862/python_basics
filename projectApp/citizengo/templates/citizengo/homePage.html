@@ -1,7 +1,6 @@
 {% extends 'main.html' %}
 
 {% block content %}
-    <h1>HOME PAGE</h1>
 
     <div class="petitions_container">
         {% for petition in petitions %}
@@ -9,8 +8,23 @@
                 <a href="{% url 'petition' petition.id %}">
                     <h3 class="title">{{petition.title}}</h3>
                 </a>
-                <p class="petition_content">{{petition.content}}</p>
+                <p class="petition_content">{{petition.description}}</p>
+                <div id="petition_data">
+                    {% comment %} <span class="petition_author">{{petition.author}}</span> {% endcomment %}
+                    <span class="petition_date">{{petition.createDate}}</span>
+                </div>
             </div>
         {% endfor %}
+        <div class="topics_container">
+            <div class="topics">
+                <span>Life</span>
+                <span>Family</span>
+                <span>Politics</span>
+                <span>Solidarity</span>
+                <span>Education</span>
+                <span>Other</span>
+            </div>
+        </div>
+        <button id="load-more-btn">Load More</button>
     </div>
 {% endblock  %}

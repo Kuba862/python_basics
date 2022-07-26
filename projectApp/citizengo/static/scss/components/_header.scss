@@ -16,9 +16,12 @@
         flex-basis: 60%;
         gap: 15px;
         .logo {
-            width: 153px;
-            height: 60px;
+            display: flex;
             margin-left: 15px;
+            img {
+                height: 60px;
+                padding-bottom: 5px;
+            }
         }
         .menu_element {
             position: relative;

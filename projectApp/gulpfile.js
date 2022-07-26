@@ -19,7 +19,11 @@ function scssTaskCgo() {
     .pipe(dest('./citizengo/static/css', { sourcemaps: '.'}));
 }
 function watchTaskCgo() {
-    watch(['citizengo/static/scss/*.scss', 'citizengo/static/scss/components/*.scss'], series(scssTaskCgo));
+    watch([
+        'citizengo/static/scss/*.scss',
+        'citizengo/static/scss/components/*.scss',
+        'citizengo/static/scss/components/homePage',
+    ], series(scssTaskCgo));
 }
 
 exports.default = series(scssTaskCgo, watchTaskCgo);
