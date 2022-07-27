@@ -3,13 +3,23 @@
     grid-template-columns: 85% 15%;
     gap: 60px 0;
     .petition {
+        display: flex;
+        flex-direction: column;
         grid-column: 1/2;
         width: 90%;
         height: 250px;
         border: 1px solid $border_color;
         border-radius: 5px;
         overflow-y: hidden;
-        padding: 0 10px;
+        .trending {
+            font-size: 12.8px;
+            padding: 5px 0;
+            color: $text_color;
+            border-bottom: 1px solid $border_color;
+            span {
+                font-weight: 700;
+            }
+        }
            a {
             text-decoration: none;
             cursor: pointer;
@@ -22,19 +32,34 @@
                 }
             }
            }
-           .petition_content {
-            width: 70%;
-            height: 40%;
-            margin: 5px 0;
-            overflow: hidden;
-           }
-           #petition_data {
-            margin-top: 50px;
-            .petition_author,
-            .petition_date {
-                font-size: 12.8px;
+           .block {
+            display: flex;
+            padding: 5px;
+           .petition_block {
+            height: 200px;
+            .petition_content {
+                width: 70%;
+                height: 40%;
+                margin: 5px 0;
+                overflow: hidden;
+               }
+               #petition_data {
+                margin-top: 50px;
+                .petition_author,
+                .petition_date {
+                    font-size: 12.8px;
+                   }
                }
            }
+        }
+           .petition_image {
+            img {
+                width: 200px;
+                border-radius: 5px;
+            }
+           }
+           
+           
     }
     .topics_container {
         grid-column: 2/3;

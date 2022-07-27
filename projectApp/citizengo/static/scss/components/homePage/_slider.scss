@@ -1,0 +1,26 @@
+.swiper-slide {
+    display: flex;
+    justify-content: space-between;
+    height: 292px;
+    border: 1px solid $border_color;
+    border-radius: 5px;
+    margin: 50px 0;
+    .swiper_left {
+        width: 50%;
+        border-right: 1px solid $border_color;
+        .swiper_image {
+            width: 100%;
+        }
+    }
+    .swiper_right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 50%;
+        padding: 5px;
+        .swiper_text {
+            height: 103px;
+            overflow: hidden;
+        }
+    }
+}

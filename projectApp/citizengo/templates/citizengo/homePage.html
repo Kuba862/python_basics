@@ -1,18 +1,47 @@
 {% extends 'main.html' %}
 
 {% block content %}
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        {% for petition in petitions %}
+      <div class="swiper-slide">
+        <div class="swiper_left">
+            <img src="{{ petition.image }}" class="swiper_image" />
+        </div>
+        <div class="swiper_right">
+            <h1 class="swiper_title">{{petition.title}}</h1>
+            <p class="swiper_text">{{petition.description}}</p>
+            <div class="swiper_date">
+                <p class="date">{{petition.createDate}}</p>
+            </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
 
     <div class="petitions_container">
         {% for petition in petitions %}
             <div class="petition">
-                <a href="{% url 'petition' petition.id %}">
-                    <h3 class="title">{{petition.title}}</h3>
-                </a>
-                <p class="petition_content">{{petition.description}}</p>
-                <div id="petition_data">
-                    {% comment %} <span class="petition_author">{{petition.author}}</span> {% endcomment %}
-                    <span class="petition_date">{{petition.createDate}}</span>
+                <a href="/" class="trending">Trending in <span>{{petition.topic}}</span></a>
+                <div class="block">
+                <div class="petition_block">
+                    <a href="{% url 'petition' petition.id %}">
+                        <h3 class="title">{{petition.title}}</h3>
+                    </a>
+                    <p class="petition_content">{{petition.description}}</p>
+                    <div id="petition_data">
+                        {% comment %} <span class="petition_author">{{petition.author}}</span> {% endcomment %}
+                        <span class="petition_date">{{petition.createDate}}</span>
+                    </div>
                 </div>
+                <div class="petition_image">
+                    <img src="{{petition.image}}" />
+                </div>
+            </div>
             </div>
         {% endfor %}
         <div class="topics_container">

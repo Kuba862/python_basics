@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Petition, Topics
+from .models import Petition
 
 admin.site.register(Petition)
-admin.site.register(Topics)
+# admin.site.register(Topics)

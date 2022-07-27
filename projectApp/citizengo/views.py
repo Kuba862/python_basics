@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from .models import Petition, Topics
+from .models import Petition
 
 def homePage(request):
-    petitions = Petition.objects.all()
+    petitions = Petition.objects.all()[:6]
     context = {
         'petitions': petitions,
     }
@@ -10,7 +10,9 @@ def homePage(request):
 
 def petitionPage(request, id):
     petition = Petition.objects.get(id=id)
-    context = {"petition": petition}
+    context = {
+        "petition": petition,
+    }
     return render(request, 'citizengo/petitionPage.html', context)
 
 def aboutUsPage(request):
@@ -19,10 +21,4 @@ def aboutUsPage(request):
 def victoriesPage(request):
     return render(request, 'citizengo/victories.html')    
 
-def topicsList(request):
-    topics = Topics.objects.all()
-    context = {
-        'topics': topics,
-    }
-    return render(request, 'citizengo/homePage.html', context)
 

@@ -23,6 +23,7 @@ function watchTaskCgo() {
         'citizengo/static/scss/*.scss',
         'citizengo/static/scss/components/*.scss',
         'citizengo/static/scss/components/homePage',
+        'citizengo/static/scss/components/petitionPage',
     ], series(scssTaskCgo));
 }
 
