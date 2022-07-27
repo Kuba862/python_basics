@@ -3,11 +3,9 @@
 {% block content %}
 <div class="petition_container">
     <h1>{{ petition.title }}</h1>
-    {% for petition in petitions %}
     <div class="petition_image">
         <img src={{petition.image}} class="petition_image" />
     </div>
-    {% endfor %}
     <div class="petition_content">
         <div class="petition">
             <p>{{ petition.description }}</p>
