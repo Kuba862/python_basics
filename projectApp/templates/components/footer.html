@@ -1,37 +1,41 @@
+{% load i18n %}
+<section class="bottom">
 <footer id="footer">
     <div class="links-column">
         <ul class="links-column-ul">
-            <li class="links-column-title">company</li>
-            <li><a href="/">About us</a></li>
-            <li><a href="/">Impact</a></li>
-            <li><a href="/">Careers</a></li>
+            <li class="links-column-title">{% trans "company" %}</li>
+            <li><a href="/">{% trans "About us" %}</a></li>
+            <li><a href="/">{% trans "Impact" %}</a></li>
+            <li><a href="/">{% trans "Careers" %}</a></li>
         </ul>
     </div>
     <div class="links-column">
         <ul class="links-column-ul">
-            <li class="links-column-title">community</li>
-            <li><a href="/">Press</a></li>
-            <li><a href="/admin">Login or Register</a></li>
+            <li class="links-column-title">{% trans "community" %}</li>
+            <li><a href="/">{% trans "Press" %}</a></li>
+            <li><a href="/admin">{% trans "Login or Register" %}</a></li>
         </ul>
     </div>
     <div class="links-column">
         <ul class="links-column-ul">
-            <li class="links-column-title">support</li>
-            <li><a href="/">Help</a></li>
-            <li><a href="/">Privacy</a></li>
-            <li><a href="/">Terms</a></li>
-            <li><a href="/">Cookies</a></li>
+            <li class="links-column-title">{% trans "support" %}</li>
+            <li><a href="/">{% trans "Help" %}</a></li>
+            <li><a href="/">{% trans "Privacy" %}</a></li>
+            <li><a href="/">{% trans "Terms" %}</a></li>
+            <li><a href="/">{% trans "Cookies" %}</a></li>
         </ul>
     </div>
     <div class="links-column">
         <ul class="links-column-ul">
-            <li class="links-column-title">connect</li>
-            <li><a href="/">Twitter</a></li>
-            <li><a href="/">Facebook</a></li>
-            <li><a href="/">Contact</a></li>
+            <li class="links-column-title">{% trans "connect" %}</li>
+            <li><a href="/">{% trans "Twitter" %}</a></li>
+            <li><a href="/">{% trans "Facebook" %}</a></li>
+            <li><a href="/">{% trans "Contact" %}</a></li>
+            <li><a href="/rosetta">{% trans "Translations" %}</a></li>
         </ul>
     </div>
 </footer>
 <div id="copyright-section">
     <p class="copy">© 2022 CitizenGO</p>
 </div>
+</section>

@@ -40,12 +40,15 @@ INSTALLED_APPS = [
     'citizengo',
     'testApp',
     'app',
+    'rosetta',
+    'parler',
     
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -71,6 +74,10 @@ TEMPLATES = [
             ],
         },
     },
+]
+
+LOCALE_PATHS = [
+    BASE_DIR / 'locale/',
 ]
 
 WSGI_APPLICATION = 'projectApp.wsgi.application'
@@ -109,7 +116,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en'
 
 TIME_ZONE = 'UTC'
 
@@ -127,3 +134,21 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+from django.utils.translation import gettext_lazy as _
+
+# LANGUAGE_CODE = 'en'
+
+LANGUAGES = (
+    ('en', _('English')),
+    ('de', _('Deutsch')),
+    ('es', _('Español')),
+    ('fr', _('Français')),
+    ('hr', _('Hrvatski')),
+    ('it', _('Italiano')),
+    ('pl', _('Polski')),
+    ('pt', _('Português')),
+    ('sk', _('Slovenčina')),
+    ('hu', _('Magyar')),
+    ('nl', _('Nederlands')),
+)

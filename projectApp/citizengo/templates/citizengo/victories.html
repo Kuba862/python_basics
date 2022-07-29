@@ -1,5 +1,23 @@
 {% extends 'main.html' %}
 
 {% block content %}
-    <h1>VICTORIES PAGE</h1>
+    <div class="petitons_container">
+        {% for petition in petitions %}
+        <div class="petition">
+            <div class="petition_block">
+                <a href="{% url 'petition' petition.id %}">
+                    <h3 class="title">{{petition.title}}</h3>
+                </a>
+                <p class="petition_content">{{petition.description}}</p>
+                <div id="petition_data">
+                    {% comment %} <span class="petition_author">{{petition.author}}</span> {% endcomment %}
+                    <span class="petition_date">{{petition.createDate}}</span>
+                </div>
+            </div>
+            <div class="petition_image">
+                <img src="/{{petition.image}}" />
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 {% endblock %}

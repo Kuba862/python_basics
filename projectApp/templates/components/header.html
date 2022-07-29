@@ -1,28 +1,30 @@
+{% load i18n %}
 <header id="header">
     <nav class="menu">
         <a href="/" class="logo">
             {% load static %}
             <img src="{% static 'images/logo.png' %}" alt="">
         </a>
-        <a href="/about-us/" class="menu_element">About us</a>
-        <a href="/victories/" class="menu_element">Victories</a>
-        <a href="/donate/" class="menu_element">Donate</a>
-        <a href="/join" class="menu_element">Join</a>
+        <a href="/about-us/" class="menu_element">{% trans 'About us' %}</a>
+        <a href="/victories/" class="menu_element">{% trans 'Victories' %}</a>
+        <a href="/donate/" class="menu_element">{% trans 'Donate' %}</a>
+        <a href="/join" class="menu_element">{% trans 'Join' %}</a>
     </nav>
     <div class="left">
-        <select id="language_selector">
-            <option value="en" selected="1">English</option>
-            <option value="de">Deutsch</option>
-            <option value="es">Español</option>
-            <option value="fr">Français</option>
-            <option value="hr">Hrvatski</option>
-            <option value="it">Italiano</option>
-            <option value="pl">Polski</option>
-            <option value="pt">Português</option>
-            <option value="sk">Slovenčina</option>
-            <option value="hu">Magyar</option>
-            <option value="nl">Nederlands</option>
-        </select>
-        <a href="createPetition">Create a petition</a>
+        <form action="{% url 'set_language' %}" method="post">
+            {% csrf_token %}
+                <select name="language" id="language_selector">
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    {% for language in languages %}
+                        <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %} >
+                            {{ language.name_local }} ({{ language.code }})
+                        </option>
+                        {% endfor %}
+                </select>    
+                <input type="submit" value="Go" >
+        </form>
+        <a href="createPetition">{% trans "Create a petition" %}</a>
     </div>
 </header>
